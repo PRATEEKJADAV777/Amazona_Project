@@ -1,0 +1,384 @@
+.product-grid {
+  font-family: 'Antic Slab', serif;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.product-grid:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-grid .product-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-grid .product-image a.image {
+  display: block;
+}
+
+.product-grid .product-image img {
+  width: 100%;
+  height: auto;
+}
+
+.product-grid .product-sale-label {
+  color: #fff;
+  background-color: #76b713;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px 6px 9px;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+
+.product-grid .product-links {
+  width: 50px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.product-grid:hover .product-links {
+  opacity: 1;
+}
+
+.product-grid .product-links li {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(-50px);
+  filter: blur(5px);
+  transition: all 0.4s ease 0s;
+}
+
+.product-grid .product-links li:nth-child(even) {
+  transform: translateX(50px);
+}
+
+.product-grid:hover .product-links li {
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.product-grid .product-links li a {
+  color: #666;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.product-grid .product-links li a:hover {
+  color: #fff;
+  background: #76b713;
+}
+
+.product-grid .product-content {
+  background-color: #fff;
+  padding: 15px 10px 3px;
+}
+
+.product-grid .title {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0 0 10px;
+}
+
+.product-grid .title a {
+  color: #222;
+  transition: all 0.3s ease 0s;
+}
+
+.product-grid .title a:hover {
+  color: #76b713;
+}
+
+.product-grid .rating {
+  width: 80px;
+  padding: 0;
+  margin: 0 0 9px;
+  list-style: none;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.product-grid .rating li {
+  color: #222;
+  font-size: 11px;
+  display: inline-block;
+}
+
+.product-grid .rating li.far {
+  color: #777;
+}
+
+.product-grid .price {
+  color: #76b713;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: right;
+  width: calc(100% - 85px);
+  display: inline-block;
+}
+
+.product-grid .price span {
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+@media screen and (max-width:990px) {
+  .product-grid {
+    margin: 0 0 30px;
+  }
+}
+
+
+/* .card-title:hover{
+  /* color: #ffad16 ; 
+}*/
+.card-title {
+  transition: all .3s;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.icoon {
+  transition: all .4s;
+}
+
+.icoon:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: #ffad16 !important;
+  cursor: pointer;
+}
+
+.card i {
+  color: #ffad16;
+}
+
+.nik:hover {
+  color: #ffad16;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.card:hover .link {
+  color: #ffad16;
+}
+
+.prdt {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+.by-btn {
+  font-family: 'Raleway', sans-serif;
+}
+
+.card h3:hover {
+  color: #d93e0b;
+}
+
+.card h3 {
+
+  margin-right: 25px;
+  font-family: 'Prata', serif;
+}
+
+.frsh {
+  font-size: 1.2rem !important;
+}
+
+.card {
+  border-radius: 10px !important;
+
+}
+
+.fa-hea rt:hover {
+  fill: #ffad16 !important;
+  color: #ffad16;
+
+}
+
+.heart {
+  transition: all 1s;
+}
+
+.heart:hover {
+  transform: scale(1.2) rotatey(.5turn);
+  color: #d93e0b !important;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgb(214, 138, 138);
+}
+
+input {
+  outline: none !important;
+}
+
+.add,
+.inp,
+.cnt {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+#image {
+  width: 500px;
+  height: 500px;
+  z-index: 99999;
+}
+
+.card {
+  z-index: 0 !important;
+}
+
+
+
+/* Loder Css------------------------------------------------------------------------------------------------------------------------- */
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(144, 7, 7);
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* /////////////////////////////////// */
+.name {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  /* //////////// */
+
+  font-size: 1.19rem;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #545454;
+
+  /* background-color: aqua; */
+  width: 100%;
+  letter-spacing: 0.3px;
+  word-spacing: 2px;
+  overflow: hidden;
+}
